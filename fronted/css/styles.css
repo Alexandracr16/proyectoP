@@ -1,113 +1,167 @@
 /* ============================
-   ESTILO GENERAL (Dark UI)
-   ============================ */
+   ESTILO GENERAL
+============================ */
 body {
-    background-color: #1e1e1e;
-    color: #e4e4e4;
-    font-family: "Segoe UI", sans-serif;
     margin: 0;
-    padding: 20px;
-}
-
-h2, h3 {
-    color: #ffffff;
-    font-weight: 500;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #e9edf3;
 }
 
 /* ============================
-   BOTONES
-   ============================ */
-button {
-    background-color: #2962ff;
+   CENTRAR LOGIN EN PANTALLA
+============================ */
+.center-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja del Login */
+.login-container {
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #041124;
+}
+
+/* ============================
+   HEADER PANEL ADMIN
+============================ */
+.header {
+    background: #031024;
     color: white;
-    padding: 10px 16px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;  /* --- CENTRADO --- */
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Botón cerrar sesión */
+.header button {
+    background: white;
+    color: #031838;
     border: none;
-    border-radius: 5px;
+    padding: 8px 18px;
+    font-weight: bold;
+    border-radius: 6px;
     cursor: pointer;
-    margin: 5px 0;
+    transition: 0.2s;
+}
+
+.header button:hover {
+    background: #e2e2e2;
+}
+
+/* ============================
+   PANEL ADMIN CENTRADO
+============================ */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Tarjetas */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* ============================
+   FORMULARIOS
+============================ */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #aac1e0;
+    border-radius: 6px;
     font-size: 15px;
+    background: #f9fbff;
+}
+
+button {
+    width: 100%;
+    background: #8b8c8d;
+    padding: 12px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
     transition: 0.2s;
 }
 
 button:hover {
-    background-color: #0039cb;
-}
-
-/* Botón rojo */
-.btn-danger {
-    background-color: #d32f2f;
-}
-
-.btn-danger:hover {
-    background-color: #9a0007;
-}
-
-/* Botón gris */
-.btn-secondary {
-    background-color: #616161;
-}
-
-.btn-secondary:hover {
-    background-color: #373737;
-}
-
-/* ============================
-   INPUTS
-   ============================ */
-input, select {
-    width: 250px;
-    padding: 10px;
-    margin: 6px 0;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #2c2c2c;
-    color: white;
-}
-
-input:focus, select:focus {
-    outline: none;
-    border-color: #2962ff;
+    background: #919497;
 }
 
 /* ============================
    TABLAS
-   ============================ */
+============================ */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-th {
-    background-color: #333;
+table th {
+    background: #999ea5;
+    color: white;
     padding: 12px;
 }
 
-td {
-    background-color: #262626;
-    padding: 10px;
-    border-bottom: 1px solid #444;
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
 }
 
-tr:hover td {
-    background-color: #333;
+table tr:hover td {
+    background: #eef4ff;
 }
 
 /* ============================
-   MODALES / CAJAS
-   ============================ */
-.box {
-    background-color: #2a2a2a;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
+   MODALES
+============================ */
+.modal {
     display: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    justify-content: center;
+    align-items: center;
 }
 
-pre {
-    background-color: #181818;
-    padding: 10px;
-    border-radius: 6px;
-    overflow: auto;
+.modal-content {
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
